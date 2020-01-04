@@ -1,4 +1,4 @@
-version: '2'
+version: "2"
 
 services:
   db:
@@ -18,4 +18,4 @@ services:
     links:
       - db:db
     ports:
-      - "3000:3000"
+      - "80:3000"
