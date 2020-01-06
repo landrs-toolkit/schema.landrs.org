@@ -1,0 +1,188 @@
+.layout-proposal {
+  padding-top: 3em;
+  padding-bottom: 4em;
+
+  @include touch {
+    padding: 1em 0 3em;
+
+    > section > .columns {
+      margin-left: 0;
+      margin-right: 0;
+
+      > .column {
+        padding-left:0;
+        padding-right:0;
+      }
+    }
+  }
+
+  .input[readonly], fieldset[readonly] .input, .textarea[readonly], fieldset[readonly] .textarea {
+    background-color: whitesmoke;
+    box-shadow: none;
+    color: #565656;
+  }
+
+  .is-subform {
+    margin-bottom: 24px;
+    &.box {
+      border-top: solid 1px $theme-shadow;
+      border-radius: 0 0 8px 8px;
+      margin-bottom: 2em;
+    }
+
+    // subforms have a darker background, we want disabled fields to stand out otherwise the default
+    // disabled field background blends into the subform background
+    .input[disabled], fieldset[disabled] .input, .textarea[disabled], fieldset[disabled] .textarea,
+    .input[readonly], fieldset[readonly] .input, .textarea[readonly], fieldset[readonly] .textarea {
+      background-color: darken(whitesmoke, 10%);
+      border-color: darken(whitesmoke, 10%);
+      box-shadow: none;
+      color: #565656;
+    }
+    .editor .editor__content .ProseMirror[contenteditable=false] {
+      background-color: darken(whitesmoke, 10%);
+      border-color: darken(whitesmoke, 10%);
+      color: #565656;
+    }
+  }
+
+  .is-prop-subform > .box {
+    background: $theme-main-background;
+  }
+
+  .is-class-subform > .box {
+    background: white;
+  }
+
+  &-sidebar-gap { // gap next to title
+    @include touch {
+      display: none;
+    }
+  }
+
+  &-header {
+    p {
+      margin-bottom: 1em;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @include touch {
+      padding: 1.5rem 1rem !important;
+    }
+  }
+
+  .title {
+    &.is-1 {
+      @extend .is-size-1;
+    }
+
+    &.is-2 {
+      @extend .is-size-4;
+    }
+  }
+
+  .title.is-3, .label {
+    @extend .is-size-7;
+    font-weight: bold;
+    color: black;
+  }
+
+  .subtitle {
+    &.is-1 {
+      @extend .is-size-6;
+
+      @include touch {
+        font-size: .8rem !important;
+        text-align: center;
+      }
+    }
+  }
+
+  .box {
+    .desc {
+      color: $theme-light-grey;
+      font-size: .9em;
+    }
+
+    .configurable-list {
+      .field {
+        margin-bottom: -1em;
+      }
+
+      .panel-block {
+        border: none;
+        padding: 0;
+        color: $theme-light-grey;
+
+        .panel-icon {
+          font-size: 1.2em;
+        }
+
+        &.is-active {
+          color: black;
+
+          .panel-icon {
+            color: black;
+          }
+        }
+      }
+    }
+
+    .dropdown {
+      width: 100%;
+    }
+  }
+
+  .proposal-submit {
+    @include touch {
+      margin: 0;
+    }
+
+    .button {
+      height: 3em;
+      width: 100%;
+    }
+    .submit-proposal {
+      @extend .button.is-info;
+    }
+    .save-proposal {
+      @extend .button.is-primary;
+    }
+    .discard-proposal,
+    .cancel-proposal {
+      @extend .button;
+    }
+  }
+
+  .proposal-edit {
+    @extend .proposal-submit;
+    margin-top: calc(1.5rem - 2.5em);
+  }
+
+  .proposal-author-img {
+    width: 40px; height: 40px;
+
+    @include touch {
+      width: 60px; height: 60px;
+    }
+  }
+
+  .proposal-author-info {
+    font-size: .9em;
+    color: $theme-dark-grey;
+  }
+
+  .proposal-author-name {
+    font-size: 1.2em;
+    color: black;
+  }
+}
+
+@include mobile {
+  .proposal-author-info {
+    text-align: center;
+  }
+}

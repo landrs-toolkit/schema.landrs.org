@@ -1,0 +1,12 @@
+.properties-table {
+  @extend .table;
+  @extend .generic-table;
+  @extend .is-fullwidth;
+}
+
+.property-ranges {
+	.icon {
+		font-size: .8em;
+		margin-top: -.15em;
+	}
+}
