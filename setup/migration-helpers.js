@@ -28,9 +28,9 @@ function getConfigFromEnvVars () {
       login: `${process.env.CUSTOMER_NAME} uses GitHub as a collaboration platform for the ontology management. Therefore you require a GitHub account to collaborate on ${process.env.CUSTOMER_NAME}.`
     },
     github: {
-      repo: _.get(editorConfig, 'github.repo', 'o'),
-      owner: _.get(editorConfig, 'github.owner', 'vhf'),
-      branch: _.get(editorConfig, 'github.branch', 'example-com'),
+      repo: _.get(editorConfig, 'github.repo', process.env.GITHUB_REPO || 'o'),
+      owner: _.get(editorConfig, 'github.owner', process.env.GITHUB_REPO_OWNER || 'vhf'),
+      branch: _.get(editorConfig, 'github.branch', process.env.GITHUB_REPO_BRANCH || 'example-com'),
       oauthClientId: process.env.OAUTH_CLIENT_ID || ''
     },
     committer: {
