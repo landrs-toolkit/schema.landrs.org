@@ -1,0 +1,67 @@
+.layout-objects-list {
+  width: 100%;
+  padding-bottom: 4em;
+}
+
+.layout-objects-list-head {
+  padding: 6rem 0 1rem;
+
+  @include touch {
+    padding: 1.5rem 1.5rem 1rem;
+  }
+
+  .main-title {
+    text-align: center;
+  }
+
+  .subtitle {
+    text-align: center;
+    margin: 1rem 9rem 0;
+
+    @include touch {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  .columns {
+    margin: 0 9rem;
+
+    @include touch {
+      margin: .5rem -1rem 0;
+    }
+  }
+}
+
+.layout-objects-list-item {
+  padding: 2rem 0;
+
+  .title {
+    @extend .is-size-3;
+    color: $theme-light-primary;
+  }
+}
+
+.layout-objects-list-tools {
+  padding-top: 2.5rem;
+
+  @include touch {
+    text-align: center;
+  }
+}
+
+.tile-placeholder {
+  @include touch {
+    text-align: center;
+  }
+}
+
+.object-tiles {
+  flex-wrap: wrap;
+  .object-tile {
+    @extend .is-3;
+    @media screen and (min-width: 769px) and (max-width: 1023px) {
+      width: 50% !important;
+    }
+  }
+}

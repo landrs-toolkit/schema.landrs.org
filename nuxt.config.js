@@ -33,7 +33,7 @@ module.exports = async () => {
     ** Global CSS
     */
     css: [
-      { lang: 'scss', src: '@/assets/themes/zazuko/theme.scss' }
+      { lang: 'scss', src: '@/assets/themes/landrs/theme.scss' }
     ],
 
     /*

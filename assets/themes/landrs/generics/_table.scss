@@ -1,0 +1,41 @@
+table.generic-table {
+  font-size: .9em;
+
+  thead th {
+    border-bottom: solid 1px $border;
+  }
+
+  th {
+    color: $theme-light-primary;
+    font-weight: normal;
+  }
+
+  th, td {
+    padding: 1em 1em 1em 0;
+  }
+
+  .table-action-button {
+    display: inline-block;
+    padding: 0;
+    margin: 0 0 0 1em;
+    background: transparent;
+    border: none;
+    font-size: inherit;
+    font-weight: normal;
+    text-decoration: underline;
+    cursor: pointer;
+    color: $theme-light-primary;
+    opacity: .6;
+
+    &:hover, &:focus {
+      opacity: 1;
+    }
+  }
+}
+
+@include touch {
+  .responsive-table {
+    max-width: 100%;
+    overflow-x: scroll;
+  }
+}

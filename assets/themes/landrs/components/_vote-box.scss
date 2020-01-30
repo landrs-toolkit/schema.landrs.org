@@ -1,0 +1,30 @@
+.vote-box {
+  font-size: 0.9rem;
+  margin-bottom: -0.7em;
+
+  @include touch {
+    display: flex;
+    justify-content: center;
+  }
+
+  &--admin {
+    display: flex;
+  }
+
+  .vote-cell {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2em;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      height: 42px;
+      padding-top: 7px;
+
+      &.is-dark-info {
+        color: white;
+      }
+    }
+  }
+}

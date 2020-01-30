@@ -1,5 +1,5 @@
 #!/bin/sh
-DEFAULT_THEME=zazuko
+DEFAULT_THEME=landrs
 EDITOR_THEME="${EDITOR_THEME:-$DEFAULT_THEME}"
 
 node setup/migrate

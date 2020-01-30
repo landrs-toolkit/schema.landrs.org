@@ -10,25 +10,26 @@
 
       <div class="columns">
         <div class="column content">
-          <p>
+          <!--<p>
             <a
               :href="bug"
               class="button is-warning">
               Report a Bug or Issue
             </a>
-          </p>
+          </p>-->
           <p>
             <a
               :href="question"
+              target="_blank"
               class="button is-success">
               Ask a Question
             </a>
           </p>
-          <p>
+          <!--<p>
             <a :href="issues">
               See all support requests
             </a>
-          </p>
+          </p>-->
         </div>
       </div>
     </section>
@@ -58,12 +59,7 @@ export default {
       ].join('/')
     },
     question () {
-      return 'https://github.com/' + [
-        this.$store.state.config.editor.github.owner,
-        this.$store.state.config.editor.github.repo,
-        'issues',
-        'new?template=question.md'
-      ].join('/')
+      return 'https://www.landrs.org/contact.html'
     }
   },
   data () {

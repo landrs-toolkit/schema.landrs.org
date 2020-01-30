@@ -1,0 +1,62 @@
+.signin-modal {
+  color: black;
+
+  .modal-card {
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 400px;
+
+    @include touch {
+      overflow: auto;
+    }
+
+    @include tablet {
+      width: 770px;
+    }
+  }
+
+  .modal-card-head {
+    padding: 3em 3em 1em 3em;
+  }
+
+  .modal-card-body {
+    padding: 1em 3em 3em 3em;
+
+    @include touch {
+      overflow: initial;
+    }
+  }
+
+  .signin-modal-close {
+    position: absolute;
+    top: 15px; right: 15px;
+    line-height: 1em;
+    z-index: 100;
+
+    color: black !important;
+    font-size: 1.5em;
+  }
+
+  .modal-card-title {
+    @extend h2;
+    font-size: 2em;
+    color: $black;
+    max-width: 100%;
+
+    @include touch {
+      text-align: center;
+    }
+  }
+
+  .github-logo {
+    width: 160px;
+    max-height: none;
+    padding: 1em 0;
+  }
+
+  .info {
+    font-size: .75em;
+    padding-bottom: 1em;
+    color: $black;
+  }
+}

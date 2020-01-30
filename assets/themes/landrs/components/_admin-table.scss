@@ -1,0 +1,149 @@
+.admin-table {
+  @extend .is-fullwidth;
+  font-size: .9em;
+  background: white;
+
+  thead th {
+    padding: 1em;
+    border-bottom: none;
+    color: white;
+    background: $theme-dark-primary;
+    font-weight: normal;
+    box-shadow:
+      0 -1px hsl(32,55%,54%) inset,
+      0 1px hsl(32,55%,54%) inset;
+
+    &:first-child {
+      box-shadow:
+        0 -1px hsl(32,55%,54%) inset,
+        0 1px hsl(32,55%,54%) inset,
+        1px 0 hsl(32,55%,54%) inset;
+    }
+
+    &:last-child {
+      box-shadow:
+        0 -1px hsl(32,55%,54%) inset,
+        0 1px hsl(32,55%,54%) inset,
+        -1px 0 hsl(32,55%,54%) inset;
+    }
+
+    a {
+      color: inherit;
+      display: flex;
+    }
+
+    .dropdown {
+      .dropdown-trigger {
+        cursor: pointer;
+
+        button, button:hover {
+          border: none;
+          color: inherit;
+          background: none;
+          padding: 0;
+          margin: 0;
+          font-size: 1em;
+          display: flex;
+        }
+      }
+      .dropdown-divider {
+        background: $theme-dark-primary;
+      }
+      a {
+        color: $theme-dark-primary;
+        background: white;
+      }
+      .dropdown-item {
+        &.is-active, &:hover {
+          color: white;
+          background: $theme-dark-primary;
+        }
+      }
+    }
+  }
+
+  tbody td {
+    padding: 1em;
+    border: none;
+    box-shadow: 0 -1px hsl(0,0%,80%) inset;
+
+    &:first-child {
+      box-shadow:
+        0 -1px hsl(0,0%,80%) inset,
+        1px 0 hsl(0,0%,80%) inset;
+    }
+
+    &:last-child {
+      box-shadow:
+        0 -1px hsl(0,0%,80%) inset,
+        -1px 0 hsl(0,0%,80%) inset;
+    }
+
+    @include touch {
+      padding: .7em;
+    }
+
+    .avatar {
+      height: 40px;
+      width: 40px;
+    }
+  }
+
+  .info {
+    font-size: .8em;
+    color: $theme-dark-grey;
+  }
+
+  code {
+    color: $theme-dark-primary;
+  }
+
+  &-version {
+    font-weight: $weight-medium;
+  }
+
+  .media {
+    @include touch {
+      flex-wrap: wrap;
+
+      .media-content {
+        flex-basis: 100%;
+      }
+
+      .media-right {
+        margin: 1rem 0 0;
+      }
+    }
+  }
+}
+
+.sort-icon {
+  margin-left: .2em;
+  height: 1em;
+
+  .material-design-icon {
+    font-size: 1.5em;
+    vertical-align: middle;
+  }
+}
+
+.draft-actions {
+  @extend .has-text-right;
+
+  .edit-draft {
+    @extend .is-small;
+    @extend .is-info;
+  }
+  .discard-draft {
+    @extend .is-small;
+    @extend .is-dark-info;
+  }
+}
+
+.hat-title {
+  white-space: nowrap;
+}
+
+.table-controls {
+  white-space: nowrap;
+}

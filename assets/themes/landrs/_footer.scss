@@ -1,0 +1,73 @@
+.footer {
+  border-top: 1px solid $border-light;
+  overflow: hidden;
+  margin-top: auto;
+  color: $theme-light-primary;
+  padding: 1em 0;
+  line-height: 1.4;
+
+  @include touch {
+    padding: 1.5rem;
+  }
+
+  p a {
+    @extend .highlighted-link;
+    color: inherit;
+    font-family: inherit;
+
+    @include touch {
+      box-shadow: 0 1px currentColor;
+    }
+
+    &:after {
+      background-color: $theme-light-primary;
+      height: 1px;
+      bottom: 0;
+    }
+
+    &:focus,
+    &:hover {
+      &:after {
+        left: -4px;
+        right: -4px;
+        bottom: -2px;
+        height: calc(1.4rem + 6px);
+      }
+    }
+  }
+
+  .footer-icon {
+    display: none;
+  }
+
+  .level-left {
+    p a {
+      margin-right: .4em;
+    }
+  }
+
+  .level-right {
+    br {
+      display: none;
+    }
+
+    .icon {
+      width: 1.5em;
+      height: 1.5em;
+    }
+
+    a {
+      margin-left: 1rem;
+
+      @include touch {
+        margin: 0 1rem 0 0;
+      }
+    }
+
+    p {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+    }
+  }
+}
