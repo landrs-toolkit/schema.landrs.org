@@ -1,0 +1,197 @@
+// landrs colors
+$orange: hsl(27, 87%, 53%);
+$orange-faded: hsl(32,96%,68%);
+$orange-light: hsl(45,100%,78%);
+$red: hsl(11,100%,56%);
+$red-dark: hsl(360,100%,38%);
+
+// Colors
+
+$black:        hsl(0, 0%, 4%);
+$black-bis:    hsl(0, 0%, 7%);
+$black-ter:    hsl(0, 0%, 14%);
+
+$grey-darker:  hsl(0, 0%, 21%);
+$grey-dark:    hsl(0, 0%, 29%);
+$grey:         hsl(0, 0%, 48%);
+$grey-light:   hsl(0, 0%, 71%);
+$grey-lighter: hsl(0, 0%, 86%);
+
+$white-ter:    hsl(0, 0%, 96%);
+$white-bis:    hsl(0, 0%, 98%);
+$white:        hsl(0, 0%, 100%);
+
+$yellow:       hsl(48,  100%, 67%);
+$green:        hsl(141, 71%,  48%);
+$turquoise:    hsl(171, 100%, 41%);
+$cyan:         hsl(204, 86%,  53%);
+$blue:         hsl(217, 71%,  53%);
+$purple:       hsl(271, 100%, 71%);
+
+$bg-light: hsl(0, 0%, 100%);
+$background: $bg-light;
+
+// Typography
+
+$family-primary: "Roboto", sans-serif;
+$family-secondary: "Playfair Display", serif;
+$family-monospace: monospace;
+$render-mode: optimizeLegibility;
+
+$size-1: 3rem;
+$size-2: 2.5rem;
+$size-3: 2rem;
+$size-4: 1.5rem;
+$size-5: 1.25rem;
+$size-6: 1rem;
+$size-7: 0.75rem;
+$sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7;
+
+$weight-light: 300;
+$weight-normal: 400;
+$weight-medium: 500;
+$weight-semibold: $weight-medium;
+$weight-bold: 700;
+
+$body-weight: $weight-light;
+$strong-weight: $weight-medium;
+
+$link: $red;
+$title-color: $black;
+$title-family: $family-secondary;
+
+// Subtitle
+$subtitle-family: $family-primary;
+$subtitle-size: inherit;
+$subtitle-weight: inherit;
+$subtitle-line-height: 1.4;
+$subtitle-negative-margin: -1rem;
+
+// Menu
+$menu-label-letter-spacing: 0;
+
+// Icon
+$icon-dimensions: 1.5em;
+$icon-dimensions-small: 1em;
+
+// Responsiveness
+
+// The container horizontal gap, which acts as the offset for breakpoints
+$gap: 64px;
+// 960, 1152, and 1344 have been chosen because they are divisible by both 12 and 16
+$tablet: 769px;
+// 960px container + 4rem
+$desktop: 960px + (2 * $gap);
+// 1152px container + 4rem
+$widescreen: 1152px + (2 * $gap);
+$widescreen-enabled: true;
+// 1344px container + 4rem
+$fullhd: 1344px + (2 * $gap);
+$fullhd-enabled: true;
+
+// Miscellaneous
+$easing: ease-out;
+$radius-small: 2px;
+$radius: 4px;
+$radius-large: 6px;
+$radius-rounded: 290486px;
+$speed: 86ms;
+$border: hsl(0,0%,59%);
+$border-light: hsla(0,0%,0%,.2);
+$border-superlight: hsl(0,0%,90%);
+
+// theme colors
+$theme-light-primary: black;
+$theme-light-primary-hover: lighten($theme-light-primary, 10%);
+$theme-dark-primary: $orange;
+$theme-light-grey: hsl(0,0%,57%);
+$theme-dark-grey: gray;
+$theme-shadow: lighten($theme-light-grey, 5%);
+$theme-main-background: white;
+
+// defining bulma variables
+$footer-background-color: $orange;
+
+// navbar
+$navbar-background-color: $theme-dark-primary;
+$navbar-height: 5rem;
+$navbar-item-color: $theme-light-primary;
+$navbar-item-hover-color: $theme-light-primary-hover;
+$navbar-item-hover-background-color: transparent;
+$navbar-item-active-color: $theme-light-primary-hover;
+
+// modal
+$modal-card-head-background-color: #F2F6F9;
+$modal-card-head-border-bottom: #F2F6F9;
+$modal-card-body-background-color: #F2F6F9;
+$modal-card-foot-border-top: #F2F6F9;
+$modal-card-title-color: black;
+
+// (?) legacy
+$panel-block-active-border-left-color: $orange;
+$panel-block-active-icon-color: $orange;
+$table-background-color: opacity(0);
+
+// Dropdown
+$navbar-dropdown-border-top: 1px solid $border;
+$navbar-dropdown-radius: 0;
+$navbar-dropdown-shadow: 1px 2px 3px hsla(0,0%,0%,.15);
+$navbar-dropdown-item-hover-background-color: transparent;
+$navbar-dropdown-item-hover-color: inherit;
+
+// Box
+$box-shadow: 0 0 0 1px $border-superlight;
+$box-radius: 0;
+
+// Columns
+$column-gap: 2.5em;
+
+// Code
+$code-background: hsla(210,13%,12%,.05);
+$code-radius: 3px;
+$code-font-size: 85%;
+$code-padding: .2em .4em;
+$code-color: inherit;
+
+// Link
+$link-focus-border: $red;
+$pagination-shadow-inset: none;
+
+// Colors
+$warning: $orange-light;
+$warning-invert: hsl(15,68%,33%);
+
+// Flags
+$variable-columns: true;
+
+// Tags
+$info: $red;
+$info-invert: white;
+$tag-radius: 0;
+
+// Button
+$radius-small: 0;
+$button-color: inherit;
+$button-background-color: white;
+$button-border-width: 1px;
+$button-border-color: $border-light;
+$button-hover-border-color: $red;
+$button-active-border-color: $red;
+$button-hover-color: $button-color;
+$button-active-color: $button-color;
+$primary: $red;
+
+// Input
+$control-padding-vertical: .75em;
+$control-padding-horizontal: .75em;
+$control-height: 2.5em;
+$control-line-height: 1.375;
+$radius: 0;
+$input-border-color: hsla(0,0%,0%,.2);
+$input-icon-color: currentColor;
+$input-shadow: none;
+$input-focus-border-color: $red;
+$input-focus-box-shadow-size: inset 0 0 0 2px;
+$input-focus-box-shadow-color: $red;
+$input-placeholder-color: rgb(117,117,117);
+$input-disabled-background-color: hsl(0,0%,94%);
