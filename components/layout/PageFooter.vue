@@ -16,6 +16,11 @@
               <div class="level-item">
                 <div>
                   <p>
+                    <a
+                      href="https://www.landrs.org"
+                      target="_blank">
+                      LANDRS Website
+                    </a>
                     Feeds:
                     <a href="/atom.xml">
                       atom
