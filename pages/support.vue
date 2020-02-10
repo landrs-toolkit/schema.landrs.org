@@ -10,26 +10,29 @@
 
       <div class="columns">
         <div class="column content">
-          <!--<p>
+          <p>
             <a
               :href="bug"
+              target="_blank"
               class="button is-warning">
               Report a Bug or Issue
             </a>
-          </p>-->
+          </p>
           <p>
             <a
               :href="question"
               target="_blank"
               class="button is-success">
-              Ask a Question
+              Getting Started
             </a>
           </p>
-          <!--<p>
-            <a :href="issues">
+          <p>
+            <a
+              :href="issues"
+              target="_blank">
               See all support requests
             </a>
-          </p>-->
+          </p>
         </div>
       </div>
     </section>
@@ -59,7 +62,7 @@ export default {
       ].join('/')
     },
     question () {
-      return 'https://www.landrs.org/contact.html'
+      return 'https://www.landrs.org/LANDRS-O.html'
     }
   },
   data () {
