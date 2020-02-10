@@ -62,7 +62,7 @@ export default {
       ].join('/')
     },
     question () {
-      return 'https://www.landrs.org/contact.html'
+      return 'https://www.landrs.org/LANDRS-O.html'
     }
   },
   data () {
