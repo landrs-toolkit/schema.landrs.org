@@ -363,8 +363,9 @@ module.exports = async function (editorConfig) {
       return false
     }
 
-    const endpoint = `https://api.github.com/applications/${editorConfig.editor.github.oauthClientId}/tokens/${bearerToken}`
+    const endpoint = `https://api.github.com/applications/${editorConfig.editor.github.oauthClientId}/token`
     const auth = {
+      access_token: bearerToken,
       username: editorConfig.editor.github.oauthClientId,
       password: editorConfig.forge.oauthClientSecret
     }
@@ -379,7 +380,7 @@ module.exports = async function (editorConfig) {
     let avatarUrl = ''
 
     try {
-      const result = await axios.get(endpoint, { auth })
+      const result = await axios.post(endpoint, { auth })
       serverToken = result.data.token
       serverId = result.data.user.id
       avatarUrl = result.data.user.avatar_url
